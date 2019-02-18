@@ -10,7 +10,8 @@ class Pokupatel:
         def dengi(self):
                 print('Your balance',self.money)
 
-        def buy(self,spisok=list()):
+
+        def buy(self,spisok=[]):
                 self.spisok=spisok
                 print('1-Молоко=300тг, 2-Пиво=200тг, 3-Шоколад=500тг, 4-Чипсы=500тг, 5-Сигареты=1500тг, 6-Йогурт=600тг')
                 take=input('Выберите что купить от 1-6: ')
@@ -71,3 +72,4 @@ while truth<7:
                 Vova.spisokpok()
                 print('=====================')
         truth+=0
+
