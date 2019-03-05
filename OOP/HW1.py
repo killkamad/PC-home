@@ -1,3 +1,6 @@
+from django.utils.functional import keep_lazy
+
+
 class Company:
     def __init__(self, people, money=0, games=0, good_games=0, bad_games=0):
         self.people = people
@@ -79,9 +82,11 @@ bethesda = Bethesda(50,300)
 listc = [EA, valve, rockstar, epic, bethesda]
 
 
-# for company in listc:
-#     if company.__class__ == Valve or company.__class__ == Epic_games or company.__class__ == Bethesda:
-#         if isinstance(company, Company):
+for company in listc:
+    if company.__class__ == Company:
+        pass
+    if isinstance(company, Company):
+        pass
 #             company.do_games()
 #     if hasattr(company, "do_games"):
 #         a = getattr(company, "do_games")
@@ -99,8 +104,8 @@ def sorting():
             x=company.money
             p=company.people
             g=company.games
-            listp.append(p)
-            listp.sort(reverse=True)
+            listp.append(x)
+            listp.sort(reverse=True, key=lambda x: x.money)
             listm.append(x)
             listm.sort(reverse=True)
             listg.append(g)

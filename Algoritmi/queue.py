@@ -1,39 +1,41 @@
 class Queue:
-        array=[]
-        number_of_elements = 0
-        array_size = 0
+    def __init__(self,size):
+        self.size = size+1
+        self.values = [0] * self.size
+        self.read = 0
+        self.write = 0
+    def is_empty(self):
+        return self.read == self.write
+    def enqueue(self,q):
+        next_position = self.write +1
+        if next_position > self.size -1:
+            next_position = 0
+        if next_position==self.read:
+            print('Error')
+            return
+        self.values[self.write] =q
+        self.write +=1
+        if self.write > self.size-1:
+            self.write =0
+    def dequeue(self):
+        if self.read ==self.write:
+            return 'Error'
+        q = self.values[self.read]
+        self.values[self.read] = 0
+        self.read +=1
+        if self.read > self.size -1:
+            self.read = 0
+        return q
 
-        def __init__(self , size):
-                self.number_of_elements = 0
-                self.array_size=size
-                self.array=[]
-
-        def push(self,a):
-                if self.array_size==self.number_of_elements:
-                        print ("no memory")
-                        return
-                self.array.append(a)
-                self.number_of_elements+=1
-
-        def pop(self):
-                if len(self.array)==0:
-                        return "Error"
-                last = self.array[-1]
-                del self.array[-1]
-                self.number_of_elements-=1
-                return last
-
-st=Stack(5)
-st.push(5)
-st.push(2)
-st.push(1)
-st.push(11)
-st.push(11)
-st.push(4)
-st.push(11)
-st.push(411)
-print(st.array)
-print(st.pop())
-print(st.pop())
-print(st.pop())
+q1 = Queue(4)
+q1.enqueue(5)
+q1.enqueue(2)
+q1.enqueue(3)
+q1.enqueue(4)
+print(q1.values)
+q1.dequeue()
+q1.dequeue()
+q1.dequeue()
+print(q1.values)
+print(q1.is_empty())
 
