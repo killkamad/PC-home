@@ -89,9 +89,10 @@ espesso = Espresso('espresso', 'sugar',400)
 
 listc = [coffe,coffe2, tea,tea2, blackTea, espesso]
 
-print(listc)
+for i in listc:
+    print(i)
 
-
+print("=======================================")
 for beverage in listc:
     if beverage.__class__ == Coffe or beverage.__class__ == Tea or beverage.__class__ == Black_Tea:
         if isinstance(beverage, Beverage):
@@ -125,6 +126,7 @@ def buble(lst):
     print(a)
 
 listp = []
+
 for beverage in listc:
         beverage.add_ingrediente()
         beverage.add_ingrediente()
