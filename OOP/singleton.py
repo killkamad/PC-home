@@ -46,6 +46,9 @@ class OneOnly:
 
     def print_name(self):
         print(self.name)
+	
+    def __str__(self):
+        return "name {}".format(self.name)
 
 
 if __name__ == "__main__":
@@ -56,16 +59,20 @@ if __name__ == "__main__":
     else:
         test2 = OneOnly("NeNeNeene")
 assert test1 == test2
+#test1 = OneOnly("babab")
 print("test1.name: ", test1.name)
 print("test2.name: ", test2.name)
-# print("test2.name: ", test3.name)
-# test1.print_name()
-
-
-
-
-
-
+#print("test2.name: ", test3.name)
+test1.print_name()
+test4=test1
+print(test4)
+print(test4)
+test4=OneOnly('halo')
+print(test4)
+print(test4)
+print("test1.name: ", test1.name)
+print("test1.name: ", test1.name)
+print("test1.name: ", test1.name)
 
 
 
