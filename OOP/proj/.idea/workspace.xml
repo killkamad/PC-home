@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="89bbf5bf-8090-44ba-9d78-b571b84045e6" name="Default" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/insta/lenta/templates/lenta/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="540">
+              <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+              <folding>
+                <element signature="n#style#0;n#a#1;n#p#0;n#div#0;n#div#1;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="css.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/insta/insta/static/css/css.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="501">
+              <caret line="143" column="24" selection-start-line="143" selection-start-column="24" selection-end-line="143" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/insta/lenta/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="400">
+              <caret line="20" column="22" lean-forward="true" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="com_detail.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/insta/lenta/templates/lenta/com_detail.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="460">
+              <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
+              <folding>
+                <element signature="n#style#0;n#p#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#p#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="profile.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/insta/lenta/templates/lenta/profile.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="320">
+              <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="com_edit.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/insta/lenta/templates/lenta/com_edit.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="com_list.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/insta/lenta/templates/lenta/com_list.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="44" />
+              <folding>
+                <element signature="n#style#0;n#p#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#3;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#p#3;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>container</find>
+      <find>margin-left</find>
+      <find>are_logg</find>
+      <find>hover</find>
+      <find>edit</find>
+      <find>change</find>
+      <find>border</find>
+      <find>footer</find>
+      <find>edit_prof</find>
+      <find>p</find>
+      <find>foot</find>
+      <find>img</find>
+      <find>author</find>
+      <find>top-me</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/insta/insta/static/css/css1.css" />
+        <option value="$PROJECT_DIR$/insta/lenta/templates/lenta/profile.html" />
+        <option value="$PROJECT_DIR$/insta/lenta/models.py" />
+        <option value="$PROJECT_DIR$/insta/lenta/templates/lenta/com_list.html" />
+        <option value="$PROJECT_DIR$/insta/lenta/templates/lenta/com_detail.html" />
+        <option value="$PROJECT_DIR$/insta/lenta/templates/lenta/base.html" />
+        <option value="$PROJECT_DIR$/insta/insta/static/css/css.css" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="953" />
+    <option name="width" value="974" />
+    <option name="height" value="1047" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="proj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="proj" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="proj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="proj" type="462c0819:PsiDirectoryNode" />
+              <item name="insta" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="proj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="proj" type="462c0819:PsiDirectoryNode" />
+              <item name="insta" type="462c0819:PsiDirectoryNode" />
+              <item name="insta" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="proj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="proj" type="462c0819:PsiDirectoryNode" />
+              <item name="insta" type="462c0819:PsiDirectoryNode" />
+              <item name="insta" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="proj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="proj" type="462c0819:PsiDirectoryNode" />
+              <item name="insta" type="462c0819:PsiDirectoryNode" />
+              <item name="insta" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="proj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="proj" type="462c0819:PsiDirectoryNode" />
+              <item name="insta" type="462c0819:PsiDirectoryNode" />
+              <item name="insta" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="Images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="proj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="proj" type="462c0819:PsiDirectoryNode" />
+              <item name="insta" type="462c0819:PsiDirectoryNode" />
+              <item name="lenta" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="proj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="proj" type="462c0819:PsiDirectoryNode" />
+              <item name="insta" type="462c0819:PsiDirectoryNode" />
+              <item name="lenta" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="proj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="proj" type="462c0819:PsiDirectoryNode" />
+              <item name="insta" type="462c0819:PsiDirectoryNode" />
+              <item name="lenta" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="lenta" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://F:/University/Programming/GitHub/PC-home/OOP/proj/insta/lenta/templates/lenta/base.html" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\University\Programming\GitHub\PC-home\OOP\proj\insta\insta\static\Images" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="89bbf5bf-8090-44ba-9d78-b571b84045e6" name="Default" comment="" />
+      <created>1556038396417</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1556038396417</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Python Console" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info anchor="right" id="R Packages" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="right" id="R Graphics" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="SciView" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/insta/lenta/templates/lenta/profile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/insta/lenta/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="20" column="22" lean-forward="true" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/insta/insta/static/Images/in.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/insta/lenta/templates/lenta/com_edit.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/insta/lenta/templates/lenta/com_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="44" />
+          <folding>
+            <element signature="n#style#0;n#p#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#3;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#p#3;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/insta/lenta/templates/lenta/com_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#p#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/insta/lenta/templates/lenta/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+          <folding>
+            <element signature="n#style#0;n#a#1;n#p#0;n#div#0;n#div#1;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/insta/insta/static/css/css.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="501">
+          <caret line="143" column="24" selection-start-line="143" selection-start-column="24" selection-end-line="143" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

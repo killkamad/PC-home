@@ -1,0 +1,29 @@
+{% extends 'lenta/base.html' %}
+
+{% block head %}
+<title>Просмотр</title>
+{% endblock %}
+
+
+{% block content %}
+    <div class="post">
+        <div class="puding">
+        {% if post.published_date %}
+            <div class="date">
+                <p class="author"> Автор: {{ post.author}} </p>
+                <p style="oolor:gray;">{{ post.published_date }}</p>
+            </div>
+        {% endif %}
+        <h2>{{ post.title }}</h2>
+        </div>
+         {% if post.image %}
+            <img src='{{ post.image.url }}' class='img' />
+         {% endif %}
+        <div class="puding">
+        <p style="color:black"><span style="font-weight: bold;font-size: 16px">{{ user.get_username }}</span> {{ post.text|linebreaksbr }}</p>
+        </div>
+            {% if post.author == user %}
+            <a class="change" href="{% url 'com_edit' pk=post.pk %}">...</a>
+        {% endif %}
+    </div>
+{% endblock %}

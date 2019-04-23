@@ -1,0 +1,17 @@
+{% extends 'lenta/base.html' %}
+{% load crispy_forms_tags %}
+{% block head %}
+<title>Регистрация</title>
+{% endblock %}
+
+{% block content %}
+
+    <form method="POST" class="post-form">{% csrf_token %}
+        <h1>Создайте Аккаунт</h1>
+        {{ form|crispy }}
+        <button type="submit" id="edit_prof">Создать</button>
+        <p class="pod">
+        Уже есть аккаунт? <a class="rll" href="{% url 'login' %}">Войдите в него</a>
+        </p>
+    </form>
+{% endblock %}

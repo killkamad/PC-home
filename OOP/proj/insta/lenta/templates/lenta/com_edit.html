@@ -1,0 +1,14 @@
+{% extends 'lenta/base.html' %}
+{% load crispy_forms_tags %}
+{% block head %}
+<title>Редактирование</title>
+{% endblock %}
+
+
+{% block content %}
+    <form method="POST" class="post-form" enctype="multipart/form-data">{% csrf_token %}
+        <h2>Новый пост:</h2>
+        {{ form|crispy }}
+        <button type="submit" id="edit_prof">Отправить</button>
+    </form>
+{% endblock %}

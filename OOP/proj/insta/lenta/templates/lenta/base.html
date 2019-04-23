@@ -1,0 +1,71 @@
+
+<html>
+    <head>
+        {% block head %}
+        <title>Base</title>
+        {% endblock %}
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/css.css' %}">
+        <link rel="shortcut icon" href="{% static 'Images/in.png' %}" type="image/png">
+    </head>
+    <body>
+    <header>
+        <div class="header">
+        <div class="header__section">
+            <div class="header__item headerlogo">
+                <div class="gradient">
+                <a href="/">Kazakhgram</a>
+                </div>
+            </div>
+
+				<div class="headerButton">
+                    {% if user.is_authenticated %}
+                    <div class="headerButton">
+                        <p class="are_logged">Вы вошли как, <span class="are_logged_right gradient"><a class="hoverr" href="/profile">{{ user.get_username }}</a></span>
+                    <a class='logo' href="/logout">Выйти</a>
+                    {% else %}
+                    <a id="edit_prof" style="padding: 7px" href="/login">Войти</a>
+                    <a class='logi' href="/register">Регистрация</a>
+                    {% endif %}
+				</div>
+		</div>
+            </div>
+    </header>
+
+    <div class="container">
+
+        <div class="content">
+            {% if messages %}
+            {% for message in messages %}
+                  <div class="alert alert-{{ message.tags }}">
+                    {{ message }}
+                  </div>
+            {% endfor %}
+          {% endif %}
+            <div style="margin-top: 20px;">
+            {% if messages %}
+            {% for message in messages %}
+              <div class="alert alert-{{ message.tags }}">
+                {{ message }}
+              </div>
+            {% endfor %}
+          {% endif %}
+            </div>
+            {% block content %}
+            {% endblock %}
+        </div>
+    <footer>
+        <div class="footerp">
+            <a href="#">&copy; 2018 RoflanCompany</a>
+             <a href="#">Почта: killka_m@mail.ru</a>
+             <a href="#">Номер: +7(707)+101+06+20</a>
+             <a href="https://www.instagram.com/killka_m/">Instagram</a>
+            <a href="https://www.twitch.tv/killka_master">Twitch</a>
+            <a href="https://www.youtube.com/user/MyKillka">YouTube</a>
+        </div>
+    </footer>
+    </div>
+</body>
+</html>
