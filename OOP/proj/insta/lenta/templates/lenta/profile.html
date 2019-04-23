@@ -15,6 +15,7 @@ user.last_name
     <p>Имя: {{ user.first_name }}</p>
     <p>Фамилия: {{ user.last_name }}</p>
     <p>Email: {{ user.email }}</p>
+    <p>Город: {{ user.city }}</p>
     {% if user.userprofile.image %}
     <img src="{{ user.userprofile.image.url }}" width="240">
     {% endif %}
