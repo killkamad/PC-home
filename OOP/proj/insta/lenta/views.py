@@ -1,4 +1,4 @@
-from .models import Post
+from .models import Post, Like
 from django.utils import timezone
 from django.shortcuts import render, get_object_or_404
 from .forms import PostForm, UserRegisterForm, EditProfileForm
@@ -8,7 +8,12 @@ from django.shortcuts import redirect
 from django.contrib.auth.models import User
 from django.contrib import messages
 
-
+from django.contrib.auth import get_user_model
+from django.contrib.contenttypes.models import ContentType
+from rest_framework import viewsets
+from rest_framework.permissions import IsAuthenticatedOrReadOnly
+from .serializers import PostSerializer
+from .mixins import LikedMixin
 
 # Создание постов, изменение, просмотр
 def com_list(request):
@@ -100,3 +105,40 @@ def change_password(request):
 
         args = {'form': form}
         return render(request, 'lenta/change_password.html', args)
+
+#Лайки
+
+User = get_user_model()
+def add_like(obj, user):
+    """Лайкает `obj`.
+    """
+    obj_type = ContentType.objects.get_for_model(obj)
+    like, is_created = Like.objects.get_or_create(
+        content_type=obj_type, object_id=obj.id, user=user)
+    return like
+def remove_like(obj, user):
+    """Удаляет лайк с `obj`.
+    """
+    obj_type = ContentType.objects.get_for_model(obj)
+    Like.objects.filter(
+        content_type=obj_type, object_id=obj.id, user=user
+    ).delete()
+def is_fan(obj, user) -> bool:
+    """Проверяет, лайкнул ли `user` `obj`.
+    """
+    if not user.is_authenticated:
+        return False
+    obj_type = ContentType.objects.get_for_model(obj)
+    likes = Like.objects.filter(
+        content_type=obj_type, object_id=obj.id, user=user)
+    return likes.exists()
+def get_fans(obj):
+    """Получает всех пользователей, которые лайкнули `obj`.
+    """
+    obj_type = ContentType.objects.get_for_model(obj)
+    return User.objects.filter(
+        likes__content_type=obj_type, likes__object_id=obj.id)
+
+class PostViewSet(LikedMixin,viewsets.ModelViewSet):
+    queryset = Post.objects.all()
+    serializer_class = PostSerializer

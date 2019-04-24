@@ -15,6 +15,13 @@ urlpatterns = [
     path('logout/', auth_views.LogoutView.as_view(template_name='lenta/logout.html'), name='logout'),
 ]
 
+apipatterns = [
+    path('', include('lenta.urls')),
+]
+
+urlpatterns+= [
+    path('api/v1/', include(apipatterns)),
+]
 
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
