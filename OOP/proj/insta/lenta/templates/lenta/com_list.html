@@ -22,10 +22,19 @@
                          {% endif %}
                         <div class="puding">
                         <p style="color:black"><span style="font-weight: bold;font-size: 16px">{{ user.get_username }}</span> {{ post.text|linebreaksbr }}</p>
-        {% if post.author == user %}
                         </div>
+        {% if post.author == user %}
             <a style="text-decoration: none" class="change" href="{% url 'com_edit' pk=post.pk %}">...</a>
         {% endif %}
+                        <form action="{% url 'post-like' pk=post.pk %}" method="post">
+                                {% csrf_token %}
+                                <button type="submit" id="edit_prof">Like</button>
+                            </form>
+                            <form action="{% url 'post-unlike' pk=post.pk %}" method="post">
+                                {% csrf_token %}
+                                <button type="submit" id="edit_prof">Dislike</button>
+                            </form>
+                            <p>{{ post.total_likes }} отметок "Нравится"</p>
 
                     </div>
                 {% endfor %}

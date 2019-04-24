@@ -142,3 +142,4 @@ def get_fans(obj):
 class PostViewSet(LikedMixin,viewsets.ModelViewSet):
     queryset = Post.objects.all()
     serializer_class = PostSerializer
+    permission_classes = (IsAuthenticatedOrReadOnly,)

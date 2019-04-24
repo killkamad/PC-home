@@ -17,11 +17,12 @@ body{
 }
 
 .gradient {
-  background: linear-gradient(90deg, #fccc63 10%, #fbad50 5%,  #cd486b 70%, #bc2a8d 15%);
+  background: linear-gradient(90deg, red 10%, #fbad50 5%,  #cd486b 70%, #bc2a8d 15%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
   border: 3px solid transparent;
+    border-right: 1px solid #c6c6c6;
 }
 
 .content a{
