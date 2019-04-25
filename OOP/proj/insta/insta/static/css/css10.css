@@ -10,7 +10,7 @@ body{
 .content{
     display:flex;
     flex-flow: column ;
-    width:40%;
+    width:30%;
     position: relative;
     margin: auto;
 
@@ -127,7 +127,7 @@ body{
     font-size: 30px;
 }
 .img{
-    width:100%;
+    width: 100%;
     padding: 0;
 }
 .header{
@@ -343,4 +343,15 @@ footer{
 }
 .puding{
     padding: 10px;
+}
+
+.finger{
+    font-size: 25px;
+    background-color: white;
+}
+
+.votes{
+    display: flex;
+    padding: 5px;
+    align-items: baseline;
 }
