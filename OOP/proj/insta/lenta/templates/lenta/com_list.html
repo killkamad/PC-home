@@ -12,9 +12,8 @@
                     <div class="post">
                         <div class="puding">
                         <p class="author"> Автор: {{ post.author}} </p>
-                        <p style="color:gray;">{{ post.published_date }}</p>
-                        <h1>
-                            <a href="{% url 'com_detail' pk=post.pk %}">{{ post.title }}</a>
+                        <h1 style="text-decoration: none;">
+                            {{ post.title }}
                         </h1>
                         </div>
                          {% if post.image %}
@@ -22,6 +21,7 @@
                          {% endif %}
                         <div class="puding">
                         <p style="color:black"><span style="font-weight: bold;font-size: 16px">{{ user.get_username }}</span> {{ post.text|linebreaksbr }}</p>
+                            <a href="{% url 'com_detail' pk=post.pk %}"> <p style="color:gray;">{{ post.published_date }}</p></a>
                         </div>
         {% if post.author == user %}
             <a style="text-decoration: none" class="change" href="{% url 'com_edit' pk=post.pk %}"><i style="font-size: 22px; padding: 5px" class="far fa-edit"></i></a>
@@ -30,16 +30,33 @@
                         <div class="votes">
                         <form style="padding: 1px" action="{% url 'post-like' pk=post.pk %}" method="post">
                                 {% csrf_token %}
-                                <button style="border: none" type="submit"><i class="far fa-thumbs-up finger like"></i></button>
+                                <button style="border: none;margin-left: 5px;" type="submit"><i class="far fa-thumbs-up finger like"></i></button>
                             </form>
                             <form style="padding: 1px" action="{% url 'post-unlike' pk=post.pk %}" method="post">
                                 {% csrf_token %}
-                                <button style="border: none" type="submit"><i class="far fa-thumbs-down finger dis"></i></button>
+                                <button style="border: none;margin-left: 5px;" type="submit"><i class="far fa-thumbs-down finger dis"></i></button>
                             </form>
+                            <a style="margin-left: 5px;" href="{% url 'add_comment_to_post' pk=post.pk %}"><i class="far fa-comment finger coment"></i></a>
                         </div>
                         {% endif %}
                         <p style="padding: 5px;font-weight: bold">{{ post.total_likes }} отметок "Нравится"</p>
+                        <a href="{% url 'com_detail' pk=post.pk %}">Комментариев: {{ post.approved_comments.count }}</a>
+                        <!--<div>-->
+                <!--{% for comment in post.comments.all %}-->
+                    <!--{% if user.is_authenticated or comment.approved_comment %}-->
+                    <!--<div class="comment">-->
+                        <!--<div class="date">-->
 
+                            <!--{{ comment.created_date }}-->
+                        <!--</div>-->
+                        <!--<strong>{{ comment.author }}</strong>-->
+                        <!--<p>{{ comment.text|linebreaks }}</p>-->
+                    <!--</div>-->
+                    <!--{% endif %}-->
+                <!--{% empty %}-->
+                    <!--<p>Пока еще нету комментариев :(</p>-->
+                <!--{% endfor %}-->
+<!--</div>-->
                     </div>
                 {% endfor %}
 {% endblock %}

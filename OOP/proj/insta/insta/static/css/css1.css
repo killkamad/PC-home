@@ -2,6 +2,10 @@ body{
     background-color: white;
 }
 
+.comment {
+    margin: 20px 0px 20px 20px;
+}
+
 .author{
     color:#222222;
     font-size: 15px;
@@ -17,7 +21,7 @@ body{
 }
 
 .gradient {
-  background: linear-gradient(90deg, red 10%, #fbad50 5%,  #cd486b 70%, #bc2a8d 15%);
+  background: linear-gradient(45deg, #ff240b 19%, #fbad50 45%,  #cd486b 70%, #bc2a8d 15%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
@@ -65,7 +69,7 @@ body{
 }
 
 .post{
-    border:1px solid #c6c6c6;
+    border:1px solid #e2e2e2;
     margin-top: 20px;
     border-radius: 5px;
     color: #222222;
@@ -119,8 +123,9 @@ body{
 
 }
 .top-menu:hover{
-    background-color: #222222;
-    color:white;
+    background: linear-gradient(90deg, red 5%, #fbad50 10%,  #cd486b 8%, #bc2a8d 75%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     text-decoration: none;
 }
 .h2{
@@ -354,4 +359,17 @@ footer{
     display: flex;
     padding: 5px;
     align-items: baseline;
+    margin-top: -15px;
+}
+
+.like:hover{
+    color: #00d300;
+}
+
+.dis:hover{
+    color:red;
+}
+
+.coment:hover{
+    color: #da00da;
 }

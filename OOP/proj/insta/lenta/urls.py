@@ -12,6 +12,9 @@ urlpatterns = [
     path('profile/<int:pk>/', views.view_profile, name='view_profile_with_pk'),
     path('profile/edit/', views.edit_profile, name='edit_profile'),
     path('profile/password/', views.change_password, name='change_password'),
+    path('post/<int:pk>/comment/', views.add_comment_to_post, name='add_comment_to_post'),
+    path('comment/<int:pk>/approve/', views.comment_approve, name='comment_approve'),
+    path('comment/<int:pk>/remove/', views.comment_remove, name='comment_remove'),
 
 
 ]

@@ -7,6 +7,7 @@ from django.contrib.contenttypes.fields import GenericForeignKey
 from django.contrib.contenttypes.models import ContentType
 from django.contrib.contenttypes.fields import GenericRelation
 
+
 class Like(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL,
                              related_name='likes',
@@ -24,7 +25,7 @@ class Post(models.Model):
     width_field = models.IntegerField(default=0)
     text = models.TextField()
     created_date = models.DateTimeField(default=timezone.now)
-    published_date = models.DateTimeField(blank=True, null=True)
+    published_date = models.DateTimeField(default=timezone.now)
 
     likes = GenericRelation(Like)
 
@@ -38,8 +39,24 @@ class Post(models.Model):
     def __repr__(self):
         return self.likes
 
+    def approved_comments(self):
+        return self.comments.filter(approved_comment=True)
+
     @property
     def total_likes(self):
         return self.likes.count()
 
+class Comment(models.Model):
+    post = models.ForeignKey('lenta.Post', on_delete=models.CASCADE, related_name='comments')
+    author = models.ForeignKey(User, on_delete=models.CASCADE)
+    text = models.TextField()
+    created_date = models.DateTimeField(default=timezone.now)
+    approved_comment = models.BooleanField(default=False)
+
+    def approve(self):
+        self.approved_comment = True
+        self.save()
+
+    def __str__(self):
+        return self.text
 

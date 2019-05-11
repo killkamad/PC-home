@@ -9,7 +9,6 @@ from lenta import views as user_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('lenta.urls')),
     path('register/', user_views.register, name='register'),
     path('login/', auth_views.LoginView.as_view(template_name='lenta/login.html'), name='login'),
     path('logout/', auth_views.LogoutView.as_view(template_name='lenta/logout.html'), name='logout'),
@@ -20,7 +19,7 @@ apipatterns = [
 ]
 
 urlpatterns+= [
-    path('api/v1/', include(apipatterns)),
+    path('', include(apipatterns)),
 ]
 
 if settings.DEBUG:
