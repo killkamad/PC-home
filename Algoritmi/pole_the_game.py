@@ -1,56 +1,5 @@
 import random
 
-# print(a[0]['question'])
-# def pole():
-#     a = [
-#         {'question': 'Предмет мебели',
-#          'quest': 'table'
-#          },
-#         {'question': 'Одежда',
-#          'quest': 'hat'
-#          },
-#         {'question': 'Компьютерная игра',
-#          'quest': 'doom'
-#          },
-#         {'question': 'Лучишй процессор',
-#          'quest': 'intel'
-#          },
-#         {'question': 'Богатейшая компания',
-#          'quest': 'apple'
-#          },
-#     ]
-#
-#     print(a)
-#     i=0
-#     while len(a)>0:
-#         r = random.randint(0, len(a))-1
-#         game=a[r]['question']
-#         slovo=a[r]['quest']
-#         # print(game)
-#         # print(len(slovo))
-#         print('=============================')
-#         print('Игра началась, вам нужно отгадать следующее слова из '+str(len(slovo))+' букв',game)
-#         # print('Выберите цифру 1 , чтобы отгадать букву или 2 чтобы отгадать слово')
-#         game_input=int(input('Выберите цифру 1 , чтобы отгадать букву или 2 чтобы отгадать слово'))
-#         if game_input==2:
-#             otgadka=input('Напишите слово ')
-#             if otgadka==slovo:
-#                 print('------')
-#                 print('Малаца вы отгадали')
-#                 print('------')
-#                 del a[r]
-#             else:
-#                 print('Неверное слово!')
-#                 return
-#         # elif game_input==1:
-#
-#         print(a)
-#
-# pole()
-
-
-import random
-
 words = [
     {'question': 'Предмет мебели',
      'answer': 'table'
@@ -58,18 +7,18 @@ words = [
     {'question': 'Предмет одежда',
      'answer': 'hat'
      },
-    # {'question': 'Первый-популярный шутер от первого лица',
-    #  'answer': 'doom'
-    #  },
-    # {'question': 'Лучиший процессор - компания выпускающая эти процессоры',
-    #  'answer': 'intel'
-    #  },
-    # {'question': 'Богатейшая технологическая компания',
-    #  'answer': 'apple'
-    #  },
-    # {'question': 'Сериал про варщика метамфетамина',
-    #  'answer': 'breaking bad'
-    #  },
+     {'question': 'Первый-популярный шутер от первого лица',
+      'answer': 'doom'
+      },
+     {'question': 'Лучиший процессор - компания выпускающая эти процессоры',
+      'answer': 'intel'
+      },
+     {'question': 'Богатейшая технологическая компания',
+      'answer': 'apple'
+      },
+     {'question': 'Сериал про варщика метамфетамина',
+      'answer': 'breaking bad'
+      },
 ]
 
 def pole():
