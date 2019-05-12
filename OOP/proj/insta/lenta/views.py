@@ -1,9 +1,9 @@
 from django.contrib.auth.decorators import login_required
 
-from .models import Post, Like, Comment
+from .models import Post, Like, Comment, Profile
 from django.utils import timezone
 from django.shortcuts import render, get_object_or_404
-from .forms import PostForm, UserRegisterForm, EditProfileForm, CommentForm
+from .forms import PostForm, UserRegisterForm, CommentForm, UserUpdateForm, ProfileUpdateForm
 from django.contrib.auth.forms import UserChangeForm, PasswordChangeForm
 from django.contrib.auth import update_session_auth_hash
 from django.shortcuts import redirect
@@ -26,6 +26,7 @@ def com_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
     return render(request, 'lenta/com_detail.html', {'post': post})
 
+@login_required
 def com_new(request):
     if request.method == "POST":
         form = PostForm(request.POST, request.FILES or None)
@@ -40,7 +41,7 @@ def com_new(request):
         form = PostForm()
     return render(request, 'lenta/com_edit.html', {'form': form})
 
-
+@login_required
 def com_edit(request, pk):
     post = get_object_or_404(Post, pk=pk)
     if request.method == "POST":
@@ -55,6 +56,11 @@ def com_edit(request, pk):
     else:
         form = PostForm(instance=post)
     return render(request, 'lenta/com_edit.html', {'form': form})
+@login_required
+def com_remove(request, pk):
+    post = get_object_or_404(Post, pk=pk)
+    post.delete()
+    return redirect('com_list')
 
 #Форма регистрации
 
@@ -73,25 +79,25 @@ def register(request):
 
 
 # Profile view
-def view_profile(request, pk=None):
-    if pk:
-        user = User.objects.get(pk=pk)
-    else:
-        user = request.user
-    args = {'user': user}
-    return render(request, 'lenta/profile.html', args)
-
-def edit_profile(request):
-    if request.method == 'POST':
-        form = EditProfileForm(request.POST, instance=request.user)
-
-        if form.is_valid():
-            form.save()
-            return redirect(view_profile)
-    else:
-        form = EditProfileForm(instance=request.user)
-        args = {'form': form}
-        return render(request, 'lenta/edit_profile.html', args)
+# def view_profile(request, pk=None):
+#     if pk:
+#         user = User.objects.get(pk=pk)
+#     else:
+#         user = request.user
+#     args = {'user': user}
+#     return render(request, 'lenta/profile.html', args)
+#
+# def edit_profile(request):
+#     if request.method == 'POST':
+#         form = EditProfileForm(request.POST, instance=request.user)
+#
+#         if form.is_valid():
+#             form.save()
+#             return redirect(view_profile)
+#     else:
+#         form = EditProfileForm(instance=request.user)
+#         args = {'form': form}
+#         return render(request, 'lenta/edit_profile.html', args)
 
 def change_password(request):
     if request.method == 'POST':
@@ -99,7 +105,7 @@ def change_password(request):
         if form.is_valid():
             form.save()
             update_session_auth_hash(request, form.user)
-            return redirect('view_profile')
+            return redirect('profile')
         else:
             return redirect('change_password')
     else:
@@ -172,3 +178,27 @@ def comment_remove(request, pk):
     comment = get_object_or_404(Comment, pk=pk)
     comment.delete()
     return redirect('com_detail', pk=comment.post.pk)
+
+@login_required
+def profile(request):
+    if request.method == 'POST':
+        u_form = UserUpdateForm(request.POST, instance=request.user)
+        p_form = ProfileUpdateForm(request.POST,
+                                   request.FILES,
+                                   instance=request.user.profile)
+        if u_form.is_valid() and p_form.is_valid():
+            u_form.save()
+            p_form.save()
+            # messages.success(request, f'Your account has been updated!')
+            return redirect('profile')
+
+    else:
+        u_form = UserUpdateForm(instance=request.user)
+        p_form = ProfileUpdateForm(instance=request.user.profile)
+
+    context = {
+        'u_form': u_form,
+        'p_form': p_form
+    }
+
+    return render(request, 'lenta/profile.html', context)

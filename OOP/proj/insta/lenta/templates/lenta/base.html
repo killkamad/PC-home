@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
         {% load static %}
-        <link rel="stylesheet" href="{% static 'css/css1.css' %}">
+        <link rel="stylesheet" href="{% static 'css/css2.css' %}">
         <link rel="shortcut icon" href="{% static 'Images/in.png' %}" type="image/png">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     </head>
@@ -24,7 +24,7 @@
 				<div class="headerButton">
                     {% if user.is_authenticated %}
                     <div class="headerButton">
-                        <p class="are_logged">Вы вошли как, <span class="are_logged_right gradient"><a class="hoverr" href="/profile">{{ user.get_username }}</a></span>
+                        <p class="are_logged">Вы вошли как, <span class="are_logged_right gradient"><a class="hoverr" href="{% url 'profile' %}">{{ user.get_username }}</a></span>
                     <a class='logo' href="/logout">Выйти</a>
                     {% else %}
                     <a id="edit_prof" style="padding: 7px" href="/login">Войти</a>
@@ -38,13 +38,6 @@
     <div class="container">
 
         <div class="content">
-            {% if messages %}
-            {% for message in messages %}
-                  <div class="alert alert-{{ message.tags }}">
-                    {{ message }}
-                  </div>
-            {% endfor %}
-          {% endif %}
             <div style="margin-top: 20px;">
             {% if messages %}
             {% for message in messages %}

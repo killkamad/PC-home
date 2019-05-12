@@ -10,11 +10,11 @@
         <div class="puding">
         {% if post.published_date %}
             <div class="date">
+                <img class="profimag" src="{{ post.author.profile.image.url }}">
                 <p class="author"> Автор: {{ post.author}} </p>
                 <p style="oolor:gray;">{{ post.published_date }}</p>
             </div>
         {% endif %}
-        <h2>{{ post.title }}</h2>
         </div>
          {% if post.image %}
             <img src='{{ post.image.url }}' class='img' />
@@ -23,7 +23,8 @@
         <p style="color:black"><span style="font-weight: bold;font-size: 16px">{{ user.get_username }}</span> {{ post.text|linebreaksbr }}</p>
         </div>
             {% if post.author == user %}
-            <a style="text-decoration: none" class="change" href="{% url 'com_edit' pk=post.pk %}"><i style="font-size: 22px; padding: 5px" class="far fa-edit"></i></a>
+                        <a style="text-decoration: none;" class="change" href="{% url 'com_edit' pk=post.pk %}"><i class="far fa-edit"></i></a>
+                        <a style="text-decoration: none;" class="change2" href="{% url 'com_remove' pk=post.pk %}"><i class="far fa-trash-alt"></i></span></a>
         {% endif %}
                         {% if user.is_authenticated %}
                         <div class="votes">
@@ -50,8 +51,10 @@
         <div class="date">
             {{ comment.created_date }}
             {% if not comment.approved_comment %}
+                {% if comment.author == user %}
                 <a class="btn btn-default" href="{% url 'comment_remove' pk=comment.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
                 <a class="btn btn-default" href="{% url 'comment_approve' pk=comment.pk %}"><span class="glyphicon glyphicon-ok"></span></a>
+            {% endif %}
             {% endif %}
         </div>
         <strong>{{ comment.author }}</strong>

@@ -9,12 +9,14 @@ body{
 .author{
     color:#222222;
     font-size: 15px;
+    margin-top: 8px;
+    font-weight: bold;
 }
 
 .content{
     display:flex;
     flex-flow: column ;
-    width:30%;
+    width:40%;
     position: relative;
     margin: auto;
 
@@ -35,13 +37,28 @@ body{
 .change{
     position: absolute;
     right: 0;
-    bottom: 0;
+    top: 0;
+    font-size: 30px;
+    padding: 5px;
+    margin-right: 30px;
+}
+
+.change:hover{
+    color: #ecc600;
+}
+
+.change2{
+    position: absolute;
+    right: 0;
+    top: 0;
     font-size: 30px;
     padding: 5px;
 }
 
+.change2:hover{
+    color: red;
 
-
+}
 
 .ssilki{
     margin-top:30px;
@@ -69,6 +86,8 @@ body{
 }
 
 .post{
+    display: flex;
+    flex-flow: column nowrap;
     border:1px solid #e2e2e2;
     margin-top: 20px;
     border-radius: 5px;
@@ -294,10 +313,13 @@ footer{
 }
 
 .contain{
+    display: flex;
     font-size: 15px;
     margin-top: 15px;
 	color:black;
-    padding: 30px;
+    padding: 15px;
+    align-items: baseline;
+
 }
 
 .margincon{
@@ -340,6 +362,7 @@ footer{
 }
 
 
+
 .border{
     border:1px solid #c6c6c6;
     border-width: thin;
@@ -371,5 +394,24 @@ footer{
 }
 
 .coment:hover{
-    color: #da00da;
+    color: #3032f2;
+}
+
+.hoverr:hover{
+    color:red;
+}
+
+.profimag{
+    width: 8%;
+    height: auto;
+    float: left;
+    margin: 0;
+    padding: 0;
+    border-radius: 50%;
+}
+
+.profimagbig{
+    width: 35%;
+    border-radius: 50%;
+    margin: auto;
 }
