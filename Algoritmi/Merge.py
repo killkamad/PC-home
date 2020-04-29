@@ -11,7 +11,7 @@ def merge_lists(a, b):
                 i += 1
             else:
                 result += b[j:]
-                print(b[j:])
+                print('b[j:]',b[j:])
                 break
         else:
             result.append(b[j])
@@ -27,7 +27,3 @@ a = [1, 3, 5, 6, 8, 8, 9]
 b = [2, 4, 6, 8, 9, 10, 12]
 print(merge_lists(a, b))
 
-x=[5,6,7]
-l=[7,8,9,10]
-g=x+l[2:]
-print(g)

@@ -1,0 +1,12 @@
+INSERT INTO music (id, file_id, right_answers, wrong_answers) VALUES (1, 'AwACAgIAAxkDAAIBZV5K3we7_HZ4lwqIb97AOZsp-xnFAAJVBQACeRRYStmC9uoV2EAQGAQ', 'Imagine Dragons', 'Arctic Monkeys,The Pixies,Arabesque');
+INSERT INTO music (id, file_id, right_answers, wrong_answers) VALUES (2, 'AwACAgIAAxkDAAIBcl5K35sZXcZoR_1eDSXN65jwYA3EAAJbBQACeRRYSq324aZb66xbGAQ', 'Arctic Monkeys', 'Imagine Dragons,The Pixies,Arabesque');
+INSERT INTO music (id, file_id, right_answers, wrong_answers) VALUES (3, 'AwACAgIAAxkDAAIBdF5K35_v74BoZWfg87N0reS0V33jAAJcBQACeRRYSqnIRDJcoD0qGAQ', 'The Pixies', 'Imagine Dragons,Arctic Monkeys,Arabesque');
+INSERT INTO music (id, file_id, right_answers, wrong_answers) VALUES (4, 'AwACAgIAAxkDAAIBdl5K36Rq16OaP9ENHrKwRXj6FeRaAAIPBgACerFYStQmHupmwaqoGAQ', 'Black Eyed Peas', 'Imagine Dragons,Arctic Monkeys,The Pixies');
+INSERT INTO music (id, file_id, right_answers, wrong_answers) VALUES (5, 'AwACAgIAAxkDAAIBeF5K36iTvZCQoTt2e6oJkYDv0QsjAAIQBgACerFYSoulv2mq_GvkGAQ', 'Arabesque', 'Imagine Dragons,Arctic Monkeys,The Pixies');
+INSERT INTO sqlite_master (type, name, tbl_name, rootpage, sql) VALUES ('table', 'music', 'music', 2, 'CREATE TABLE music
+(
+	id integer,
+	file_id text,
+	right_answers text,
+	wrong_answers text
+)');

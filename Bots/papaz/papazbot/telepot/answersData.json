@@ -1,0 +1,33 @@
+{
+  "welcome":"Privetstvuju povelitel  eto moi komandi:Test1,Test2,Kvadrat+,Tg,Ctg,Distance,Speed,Force,help",
+  "badRequest": "Netu takoi comandi!",
+  "lowRequest":"Pisat nado s big bukvi tak skazal sozdatel",
+  "noData":"gde dannie ih netu",
+  "addsToAnswer": {
+    "start": [
+      " stidno ne znat ",
+      " nu ti sho eto ",
+      " untermensh eto",
+      " sho ti neznaesh eto zhe ",
+      " pohodu minus mozg otvet budet "
+      ],
+    "end": [
+      " da da ja",
+      " eto jestko",
+      " idi otsuda",
+      " aaaaa tikai s gorodu",
+      " Ja krutoi bot"
+      ]
+  },
+  "formulas":{
+    "Kvadrat+": "(a^2+2ab+b^2)",
+    "Tg": "(sinx/cosx)",
+    "Ctg": "(cosx/sinx)",
+    "Distance": "(V*t)",
+    "Speed": "(S/t)",
+    "Force": "(m*a)",
+    "Test1": "Pifagor"
+    
+    
+  }
+}
